@@ -1,0 +1,306 @@
+/* ==============================
+   RESET
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ==============================
+   BODY BACKGROUND
+============================== */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #c9f7d9, #e2f5e9, #b6ecc8);
+}
+
+/* ==============================
+   HEADER
+============================== */
+header {
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #2f7a4f; /* green */
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* ==============================
+   MAIN LAYOUT
+============================== */
+.container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ==============================
+   SIDEBAR
+============================== */
+.side-nav {
+    flex: 0 0 250px; /* fixed width in flex layout */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    min-height: 80vh;
+    background: url('../images/1764201845225.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+
+    /* Slide-in animation */
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideLeft 0.9s ease forwards;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: rgba(255,255,255,0.85);
+    color: #2f7a4f; /* green */
+}
+
+/* ==============================
+   DASHBOARD CONTENT
+============================== */
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* Slide-in animation */
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideRight 1s ease forwards;
+}
+
+/* ==============================
+   CARD / TABLE
+============================== */
+.announcement-container,
+.task-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.task-box {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.task-box h3,
+.announcement-title {
+    color: #2f7a4f; /* green */
+    margin-bottom: 10px;
+}
+
+.announcement-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* TASK TABLE */
+.task-table,
+.user-table,
+.announcement-table,
+.submission-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: white;
+    margin-top: 15px;
+}
+
+.task-table th,
+.user-table th,
+.announcement-table th,
+.submission-table th,
+.task-table td,
+.user-table td,
+.announcement-table td,
+.submission-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+.task-table th,
+.user-table th,
+.announcement-table th,
+.submission-table th {
+    background-color: #2f7a4f; /* green */
+    color: white;
+    font-weight: bold;
+}
+
+.task-table tr:hover,
+.user-table tr:hover,
+.announcement-table tr:hover,
+.submission-table tr:hover {
+    background-color: #e8f5eb; /* soft mint green */
+}
+
+/* ==============================
+   ACTION BUTTONS
+============================== */
+.edit-btn,
+.delete-btn,
+.post-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #33aa44;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #2b8836;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.post-btn {
+    background: #ffcc00;
+    color: #5a4a00;
+}
+
+.post-btn:hover {
+    background: #e6b800;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #2f7a4f; /* green */
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: auto;
+}
+
+/* ==============================
+   ANIMATIONS
+============================== */
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-nav {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .side-nav {
+        width: 100%;
+    }
+
+    .announcement-container,
+    .task-box {
+        padding: 18px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 10px;
+    }
+}

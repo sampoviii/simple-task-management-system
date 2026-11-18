@@ -1,0 +1,97 @@
+/* GENERAL RESET & FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #c9d8ff, #dfe4ea, #bcd2f8);
+    position: relative;
+}
+
+/* MAIN CONTAINER */
+.container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LANDING BOX */
+.landing-box {
+    background: white;
+    padding: 40px 30px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* TITLE & TAGLINE */
+.landing-box h1 {
+    color: #3b5c9d;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    background: #4f6fb8;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #3e5a99;
+}
+
+.btn-outline {
+    background: white;
+    color: #4f6fb8;
+    border: 2px solid #4f6fb8;
+}
+
+.btn-outline:hover {
+    background: #4f6fb8;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .bg-img {
+        display: none;
+    }
+    .landing-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

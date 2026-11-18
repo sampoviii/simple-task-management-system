@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Blue to grey pastel gradient */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    background: linear-gradient(135deg, #c9d8ff, #dfe4ea, #bcd2f8);
+}
+
+/* Background images behind form */
+.bg-img {
+    position: absolute;
+    width: 200px;
+    height: 450px;
+    object-fit: cover;
+    opacity: 0.75;
+    z-index: 1;
+    border-radius: 28px;
+}
+
+/* Position of blue graphic (left side) */
+.bg-blue {
+    left: 31%;
+}
+
+/* Position of green graphic (right side) */
+.bg-green {
+    right: 31%;
+}
+
+/* Keep form above background */
+.container {
+    position: relative;
+    z-index: 5;
+}
+
+/* Center container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box styling */
+.form-box {
+    width: 380px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center; /* helps keep elements centered */
+}
+
+/* Center the logo */
+.logo {
+    display: block;
+    margin: 0 auto 15px auto; 
+}
+
+/* LOGIN / SIGN UP title */
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3b5c9d;
+}
+
+/* Inputs */
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #a7b7d4;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-box input:focus {
+    border-color: #4f6fb8;
+    box-shadow: 0 0 5px rgba(79, 111, 184, 0.4);
+}
+
+/* Button */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #4f6fb8;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background: #3e5a99;
+}
+
+/* "Don't have an account?" text spacing */
+.click {
+    text-align: center;
+    margin-top: 20px;  
+    font-size: 14px;
+}
+
+.click a {
+    color: #4f6fb8;
+    text-decoration: none;
+}
+
+.click a:hover {
+    text-decoration: underline;
+}
